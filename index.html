@@ -1,11 +1,80 @@
+<!DOCTYPE html>
+<html>
+
 <head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" type="text/jsx"></script>
 </head>
+
 <body>
 
-  <div class="container">
-  </div>
+<hr>
+<hr>
+<hr>
+
+<div class="container">
+</div>
+<script src="./main.js"></script>
+
+<hr>
+<hr>
+<hr>
+
+<div></div>
+<h1>Three query</h1>
+This is an initial interface for buildiong a query  (using Doctrine ORM).<br>
+Suppose you has Ta... Tz Tables.<br>
+You can ask (BUILD) a query starting only fron Ta, Tb, Tc<br>
+Ta is connected (one to many or onte to one) to tables Ta, Te, Tf<br>
+Tb is connected to tables Tg, Th<br>
+Tc is connected with no tables.<br>
+Td to Ti,Tl<br>
+Te to Tm<br>
+Ti to Tn<br>
+Tf, Tg, Th,  Tl,Tm, Tn are connected with no tables.<br>
+Tn is connected with Td (creating a loop!)<br>
+
+<table border=1>
+  <tr>
+    <td rowspan=4>Ta</td><td rowspan=2> ->Td  </td><td> ->Ti</td><td>->Tn (->Ta) </td>
+  </tr>
+
+  <tr>
+    <td > ->Tl </td>
+  </tr>
+
+  <tr>
+    <td > ->Te </td><td>  ->Tm </td>
+  </tr>
+
+  <tr>
+    <td > ->Te </td>
+  </tr>
+
+
+
+  <tr>
+    <td rowspan=2>Tb </td><td>-> Tg   </td>
+  </tr>
+
+  <tr>
+    <td >-> tH </td>
+  </tr>
+
+  <tr>
+    <td >Tc </td>
+  </tr>
+
+</table>
+
+schema<br>
+<div id="schema"></div>
+<br>fineschema
 
 </body>
-<script src="./main.js"></script>
+</html>
